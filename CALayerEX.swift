@@ -1,39 +1,21 @@
 //
 //  CALayerEX.swift
-//  CALayer extension
+//  CALayer oneLineCodeAnimation extension
 //
 //  Created by amin sadeghian on 9/24/17.
-//  Copyright © 2017 aminsadeghian. All rights reserved.
+//  Copyright © 2019 aminsadeghian. All rights reserved.
 //
 
 import UIKit
+import QuartzCore
 
 extension CALayer{
     
-    // SpeingAnimation
-    func springScale(x: CGFloat,
-                     duration: CFTimeInterval,
-                     damping: CGFloat,
-                     velocity: CGFloat,
-                     timingFunction: CAMediaTimingFunction,
-                     delay: CFTimeInterval){
-        let animation = CASpringAnimation(keyPath: "transform.scale.x")
-        animation.duration = duration
-        animation.timingFunction = timingFunction
-        animation.damping = damping
-        animation.initialVelocity = velocity
-        animation.toValue = x
-        animation.beginTime = CACurrentMediaTime() + delay
-        animation.isRemovedOnCompletion = false
-        animation.fillMode = CAMediaTimingFillMode.forwards
-        self.add(animation, forKey: nil)
-    }
-    
     // Easing Animation
     func transform3D(to: CATransform3D,
-                duration: CFTimeInterval,
-                timingFunction: CAMediaTimingFunction,
-                delay: CFTimeInterval){
+                     duration: CFTimeInterval,
+                     timingFunction: CAMediaTimingFunction,
+                     delay: CFTimeInterval){
         let animation = CABasicAnimation(keyPath: "transform")
         animation.duration = duration
         animation.timingFunction = timingFunction
@@ -43,7 +25,6 @@ extension CALayer{
         animation.fillMode = CAMediaTimingFillMode.forwards
         self.add(animation, forKey: nil)
     }
-    
     func anchor(point: CGPoint,
                 duration: CFTimeInterval,
                 timingFunction: CAMediaTimingFunction,
@@ -57,7 +38,6 @@ extension CALayer{
         animation.fillMode = CAMediaTimingFillMode.forwards
         self.add(animation, forKey: nil)
     }
-    
     func scale(to: CGSize,
                duration: CFTimeInterval,
                timingFunction: CAMediaTimingFunction,
@@ -71,7 +51,6 @@ extension CALayer{
         animation.fillMode = CAMediaTimingFillMode.forwards
         self.add(animation, forKey: nil)
     }
-    
     func scale(x: CGFloat,
                duration: CFTimeInterval,
                timingFunction: CAMediaTimingFunction,
@@ -85,7 +64,6 @@ extension CALayer{
         animation.fillMode = CAMediaTimingFillMode.forwards
         self.add(animation, forKey: nil)
     }
-    
     func scale(y: CGFloat,
                duration: CFTimeInterval,
                timingFunction: CAMediaTimingFunction,
@@ -99,7 +77,6 @@ extension CALayer{
         animation.fillMode = CAMediaTimingFillMode.forwards
         self.add(animation, forKey: nil)
     }
-    
     func scale(z: CGFloat,
                duration: CFTimeInterval,
                timingFunction: CAMediaTimingFunction,
@@ -113,7 +90,6 @@ extension CALayer{
         animation.fillMode = CAMediaTimingFillMode.forwards
         self.add(animation, forKey: nil)
     }
-    
     func size(to: CGSize,
               duration: CFTimeInterval,
               timingFunction : CAMediaTimingFunction,
@@ -127,7 +103,6 @@ extension CALayer{
         animation.fillMode = CAMediaTimingFillMode.forwards
         self.add(animation, forKey: nil)
     }
-    
     func size(width: CGFloat,
               duration: CFTimeInterval,
               timingFunction : CAMediaTimingFunction,
@@ -141,7 +116,6 @@ extension CALayer{
         animation.fillMode = CAMediaTimingFillMode.forwards
         self.add(animation, forKey: nil)
     }
-    
     func size(height: CGFloat,
               duration: CFTimeInterval,
               timingFunction: CAMediaTimingFunction,
@@ -155,7 +129,6 @@ extension CALayer{
         animation.fillMode = CAMediaTimingFillMode.forwards
         self.add(animation, forKey: nil)
     }
-    
     func move(to: CGPoint,
               duration: CFTimeInterval,
               timingFunction: CAMediaTimingFunction,
@@ -169,7 +142,6 @@ extension CALayer{
         animation.fillMode = CAMediaTimingFillMode.forwards
         self.add(animation, forKey: nil)
     }
-    
     func move(x : CGFloat,
               duration: CFTimeInterval,
               timingFunction: CAMediaTimingFunction,
@@ -183,7 +155,6 @@ extension CALayer{
         animation.fillMode = CAMediaTimingFillMode.forwards
         self.add(animation, forKey: nil)
     }
-    
     func move(y: CGFloat,
               duration: CFTimeInterval,
               timingFunction: CAMediaTimingFunction,
@@ -197,7 +168,6 @@ extension CALayer{
         animation.fillMode = CAMediaTimingFillMode.forwards
         self.add(animation, forKey: nil)
     }
-    
     func rotate(degrees: CGFloat,
                 duration: CFTimeInterval,
                 timingFunction: CAMediaTimingFunction,
@@ -211,7 +181,6 @@ extension CALayer{
         animation.isRemovedOnCompletion = false
         self.add(animation, forKey: nil)
     }
-    
     func rotate(x: CGFloat,
                 duration: CFTimeInterval,
                 timingFunction: CAMediaTimingFunction,
@@ -225,7 +194,6 @@ extension CALayer{
         animation.isRemovedOnCompletion = false
         self.add(animation, forKey: nil)
     }
-    
     func rotate(y: CGFloat,
                 duration: CFTimeInterval,
                 timingFunction: CAMediaTimingFunction,
@@ -239,7 +207,6 @@ extension CALayer{
         animation.isRemovedOnCompletion = false
         self.add(animation, forKey: nil)
     }
-    
     func rotate(z: CGFloat,
                 duration: CFTimeInterval,
                 timingFunction: CAMediaTimingFunction,
@@ -253,7 +220,6 @@ extension CALayer{
         animation.isRemovedOnCompletion = false
         self.add(animation, forKey: nil)
     }
-    
     func round(corners: CGFloat,
                duration: CFTimeInterval,
                timingFunction: CAMediaTimingFunction,
@@ -267,7 +233,6 @@ extension CALayer{
         animation.fillMode = CAMediaTimingFillMode.forwards
         self.add(animation, forKey: nil)
     }
-    
     func shadow(offset: CGSize,
                 duration: CFTimeInterval,
                 timingFunction: CAMediaTimingFunction,
@@ -281,7 +246,6 @@ extension CALayer{
         animation.fillMode = CAMediaTimingFillMode.forwards
         self.add(animation, forKey: nil)
     }
-    
     func shadow(color: UIColor,
                 duration: CFTimeInterval,
                 timingFunction: CAMediaTimingFunction,
@@ -295,7 +259,6 @@ extension CALayer{
         animation.fillMode = CAMediaTimingFillMode.forwards
         self.add(animation, forKey: nil)
     }
-    
     func shadow(path: CGPath,
                 duration: CFTimeInterval,
                 timingFunction: CAMediaTimingFunction,
@@ -309,7 +272,6 @@ extension CALayer{
         animation.fillMode = CAMediaTimingFillMode.forwards
         self.add(animation, forKey: nil)
     }
-    
     func shadow(radius: CGFloat,
                 duration: CFTimeInterval,
                 timingFunction: CAMediaTimingFunction,
@@ -323,7 +285,6 @@ extension CALayer{
         animation.fillMode = CAMediaTimingFillMode.forwards
         self.add(animation, forKey: nil)
     }
-    
     func shadow(opacity: CGFloat,
                 duration: CFTimeInterval,
                 timingFunction : CAMediaTimingFunction,
@@ -337,7 +298,6 @@ extension CALayer{
         animation.fillMode = CAMediaTimingFillMode.forwards
         self.add(animation, forKey: nil)
     }
-    
     func opacity(to: CGFloat,
                  duration: CFTimeInterval,
                  timingFunction: CAMediaTimingFunction,
@@ -351,7 +311,6 @@ extension CALayer{
         animation.beginTime = CACurrentMediaTime() + delay
         self.add(animation, forKey: nil)
     }
-    
     func background(color: UIColor,
                     duration: CFTimeInterval,
                     timingFunction: CAMediaTimingFunction,
@@ -365,7 +324,6 @@ extension CALayer{
         animation.isRemovedOnCompletion = false
         self.add(animation, forKey: nil)
     }
- 
     func border(color: UIColor,
                 duration: CFTimeInterval,
                 timingFunction: CAMediaTimingFunction,
@@ -379,7 +337,6 @@ extension CALayer{
         animation.isRemovedOnCompletion = false
         self.add(animation, forKey: nil)
     }
-    
     func border(width: CGFloat,
                 duration: CFTimeInterval,
                 timingFunction: CAMediaTimingFunction,
@@ -393,7 +350,6 @@ extension CALayer{
         animation.isRemovedOnCompletion = false
         self.add(animation, forKey: nil)
     }
-    
     func stroke(end: CGFloat,
                 duration: CFTimeInterval,
                 timingFunction: CAMediaTimingFunction,
@@ -408,7 +364,6 @@ extension CALayer{
         animation.fillMode = CAMediaTimingFillMode.forwards
         self.add(animation, forKey: nil)
     }
-    
     func stroke(color: UIColor,
                 duration: CFTimeInterval,
                 timingFunction: CAMediaTimingFunction,
@@ -423,7 +378,6 @@ extension CALayer{
         animation.fillMode = CAMediaTimingFillMode.forwards
         self.add(animation, forKey: nil)
     }
-    
     func line(width: CGFloat,
               duration: CFTimeInterval,
               timingFunction: CAMediaTimingFunction,
@@ -438,7 +392,6 @@ extension CALayer{
         animation.fillMode = CAMediaTimingFillMode.forwards
         self.add(animation, forKey: nil)
     }
-    
     func position(z: CGFloat,
                   duration: CFTimeInterval,
                   timingFunction: CAMediaTimingFunction,
@@ -467,7 +420,6 @@ extension CALayer{
         animation.fillMode = CAMediaTimingFillMode.forwards
         self.add(animation, forKey: nil)
     }
-    
     func gradient(location: [CGFloat],
                   duration: CFTimeInterval,
                   timingFunction: CAMediaTimingFunction,
@@ -481,7 +433,6 @@ extension CALayer{
         animation.fillMode = CAMediaTimingFillMode.forwards
         self.add(animation, forKey: nil)
     }
-    
     func start(point: CGPoint,
                duration: CFTimeInterval,
                timingFunction: CAMediaTimingFunction,
@@ -495,7 +446,6 @@ extension CALayer{
         animation.fillMode = CAMediaTimingFillMode.forwards
         self.add(animation, forKey: nil)
     }
-    
     func end(point: CGPoint,
              duration: CFTimeInterval,
              timingFunction: CAMediaTimingFunction,
@@ -524,7 +474,6 @@ extension CALayer{
         animation.isRemovedOnCompletion = false
         self.add(animation, forKey: nil)
     }
-    
     func path(to: CGPath,
               duration: CFTimeInterval,
               timingFunction: CAMediaTimingFunction,
@@ -538,7 +487,6 @@ extension CALayer{
         animation.isRemovedOnCompletion = false
         self.add(animation, forKey: nil)
     }
-    
     func move(path: CGMutablePath,
               duration: CFTimeInterval,
               timingFunction: CAMediaTimingFunction,
@@ -567,7 +515,6 @@ extension CALayer{
         animation.fillMode = CAMediaTimingFillMode.forwards
         self.add(animation, forKey: nil)
     }
-    
     func foreground(color: UIColor,
                     duration: CFTimeInterval,
                     timingFunction: CAMediaTimingFunction,
@@ -582,31 +529,48 @@ extension CALayer{
         self.add(animation, forKey: nil)
     }
     
+    // SpringAnimation
+    func springScale(x: CGFloat,
+                     duration: CFTimeInterval,
+                     damping: CGFloat,
+                     velocity: CGFloat,
+                     timingFunction: CAMediaTimingFunction,
+                     delay: CFTimeInterval){
+        let animation = CASpringAnimation(keyPath: "transform.scale.x")
+        animation.duration = duration
+        animation.timingFunction = timingFunction
+        animation.damping = damping
+        animation.initialVelocity = velocity
+        animation.toValue = x
+        animation.beginTime = CACurrentMediaTime() + delay
+        animation.isRemovedOnCompletion = false
+        animation.fillMode = CAMediaTimingFillMode.forwards
+        self.add(animation, forKey: nil)
+    }
+    
+    // faster get & set essential properties
     var x:CGFloat{
         get{return position.x}
         set{position.x = newValue}
     }
-    
     var y:CGFloat{
         get{return position.y}
         set{position.y = newValue}
     }
-    
     var height: CGFloat {
         get{return bounds.size.height}
         set{bounds.size.height = newValue}
     }
-    
     var width: CGFloat{
-        get{return bounds.size.width
-        }set{bounds.size.width = newValue}
+        get{return bounds.size.width}
+        set{bounds.size.width = newValue}
     }
     
+    // faster set border and shadow
     func border(color: CGColor, width: CGFloat){
         self.borderColor = color
         self.borderWidth = width
     }
-    
     func shadow(offset: CGSize, color: UIColor, radius: CGFloat, opacity: CGFloat){
         self.shadowOffset = offset
         self.shadowColor = color.cgColor
@@ -615,29 +579,21 @@ extension CALayer{
     }
 }
 
-let easeInOut = CAMediaTimingFunction(controlPoints: 0.7 , 0 , 0.3 , 1)
-let easeOut = CAMediaTimingFunction(controlPoints: 0.5 , 0 , 0.3 , 1)
-
 let easeIn01 = CAMediaTimingFunction(controlPoints: 0.47, 0, 0.745, 0.715)
 let easeOut01 = CAMediaTimingFunction(controlPoints: 0.39, 0.575, 0.565, 1)
 let easeInOut01 = CAMediaTimingFunction(controlPoints: 0.445, 0.05, 0.55, 0.95)
-
 let easeIn02 = CAMediaTimingFunction(controlPoints: 0.55, 0.085, 0.68, 0.53)
 let easeOut02 = CAMediaTimingFunction(controlPoints: 0.25, 0.46, 0.45, 0.94)
 let easeInOut02 = CAMediaTimingFunction(controlPoints: 0.455, 0.03, 0.515, 0.955)
-
 let easeIn03 = CAMediaTimingFunction(controlPoints: 0.55, 0.055, 0.675, 0.19)
 let easeOut03 = CAMediaTimingFunction(controlPoints: 0.215, 0.61, 0.355, 1)
 let easeInOut03 = CAMediaTimingFunction(controlPoints: 0.645, 0.045, 0.355, 1)
-
 let easeIn04 = CAMediaTimingFunction(controlPoints: 0.895, 0.03, 0.685, 0.22)
 let easeOut04 = CAMediaTimingFunction(controlPoints: 0.165, 0.84, 0.44, 1)
 let easeInOut04 = CAMediaTimingFunction(controlPoints: 0.77, 0, 0.175, 1)
-
 let easeIn05 = CAMediaTimingFunction(controlPoints: 0.755, 0.05, 0.855, 0.06)
 let easeOut05 = CAMediaTimingFunction(controlPoints: 0.23, 1, 0.32, 1)
 let easeInOut05 = CAMediaTimingFunction(controlPoints: 0.86, 0, 0.07, 1)
-
 let easeIn06 = CAMediaTimingFunction(controlPoints: 0.95, 0.05, 0.795, 0.035)
 let easeOut06 = CAMediaTimingFunction(controlPoints: 0.19, 1, 0.22, 1)
 let easeInOut06 = CAMediaTimingFunction(controlPoints: 1, 0, 0, 1)
